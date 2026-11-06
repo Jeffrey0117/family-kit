@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "apps": [
+    {
+      "id": "duckshot",
+      "name": "DuckShot 截圖鴨鴨",
+      "tagline": "區域截圖、文字辨識、一鍵上傳圖床",
+      "repo": "Jeffrey0117/DuckShot",
+      "productName": "DuckShot",
+      "appId": "tw.duk.duckshot",
+      "homepage": "https://jeffrey0117.github.io/DuckShot/",
+      "icon": "https://raw.githubusercontent.com/Jeffrey0117/DuckShot/main/assets/icons/app-icon.png"
+    },
+    {
+      "id": "repic",
+      "name": "RePic",
+      "tagline": "看圖、管圖：0 KB 虛擬相簿、裁切、標註",
+      "repo": "Jeffrey0117/RePic",
+      "productName": "Repic",
+      "appId": "com.repic.app",
+      "homepage": "https://jeffrey0117.github.io/RePic/",
+      "icon": "https://raw.githubusercontent.com/Jeffrey0117/RePic/main/repic-logo.png"
+    },
+    {
+      "id": "revid",
+      "name": "ReVid",
+      "tagline": "看片、裁片：本機影片檢視與空間裁切",
+      "repo": "Jeffrey0117/ReVid",
+      "productName": "ReVid",
+      "appId": "com.revid.app",
+      "homepage": "https://github.com/Jeffrey0117/ReVid/releases/latest",
+      "icon": "https://raw.githubusercontent.com/Jeffrey0117/ReVid/master/revid.png"
+    }
+  ]
+}

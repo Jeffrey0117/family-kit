@@ -4,9 +4,23 @@
   "description": "Electron app 內「姊妹 app 一鍵安裝」面板：偵測已安裝（Windows Uninstall 登錄檔）、抓 GitHub release 最新安裝檔、下載進度、啟動安裝、雲端 family.json 清單（本機快取 + 內建後備）",
   "main": "index.js",
   "scripts": {
+    "test": "node --test \"test/*.test.js\"",
     "example": "node example.js"
   },
-  "keywords": [],
+  "keywords": [
+    "electron",
+    "installer",
+    "github-releases",
+    "cross-promotion",
+    "family"
+  ],
   "author": "Jeffrey0117",
-  "license": "MIT"
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "renderer.js",
+    "family.json",
+    "README.md",
+    "SKILL.md"
+  ]
 }
