@@ -1,0 +1,10 @@
+{
+  "repo": 1,
+  "name": "family-kit",
+  "what": "Electron app 內「姊妹 app 一鍵安裝」面板：偵測已安裝（Windows Uninstall 登錄檔）、抓 GitHub release 最新安裝檔、下載進度、啟動安裝、雲端 family.json 清單（本機快取 + 內建後備）",
+  "kind": "kit",
+  "work": {
+    "guide": "README.md",
+    "test": "npm test"
+  }
+}
