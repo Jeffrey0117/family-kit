@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.svg" width="96" height="96" alt="family-kit logo">
+</p>
+
 # family-kit
 
 Electron app 內的「姊妹 app 一鍵安裝」面板。零依賴（Node 內建 + 呼叫端注入 Electron `shell` / `ipcMain`）。
