@@ -6,5 +6,31 @@
   "work": {
     "guide": "README.md",
     "test": "npm test"
-  }
+  },
+  "offers": [
+    {
+      "id": "create_family",
+      "what": "Electron 主進程用的 factory：createFamily({ selfId, cacheDir, shell, fetch, userAgent }) 回傳 list()（每個姊妹 app 是否已安裝、最新版）、install(id)（下載 GitHub release 安裝檔並啟動）、open(id)、openPage(id)、detectInstalled、latestRelease，以及 registerIpc(ipcMain, { prefix, isTrusted }) 一次接好 IPC。Electron app 要推薦並一鍵安裝同一家的其他 app 時用；目前只有 Windows 會偵測已安裝。",
+      "how": "import",
+      "import": "const createFamily = require(\"family-kit\")"
+    },
+    {
+      "id": "pure_helpers",
+      "what": "掛在同一個匯出上的純函式：解析 Windows Uninstall 登錄檔輸出、比對 DisplayName、從 DisplayIcon 取 exe 路徑、從 release assets 挑安裝檔、從清單排除自己。要單獨測試或重用這些判斷邏輯時用。",
+      "how": "import",
+      "import": "const { parseRegDisplayNames, parseRegValues, matchInstalledEntry, exeFromDisplayIcon, pickAsset, selectApps } = require(\"family-kit\")"
+    },
+    {
+      "id": "renderer_panel",
+      "what": "renderer 端的面板，用 script 標籤載入後是全域 FamilyKit：FamilyKit.mount(容器, preload 暴露的 api, { title, subtitle }) 畫出姊妹 app 清單與安裝/開啟按鈕，回傳 { refresh(), destroy() }。顏色吃宿主的 CSS 變數，自動跟主題；這個檔沒有模組匯出，不能 require。",
+      "how": "import",
+      "import": "<script src=\"../node_modules/family-kit/renderer.js\"></script>"
+    },
+    {
+      "id": "skill",
+      "what": "這個 kit 的打法。Electron app 要「推薦並一鍵安裝同一家的其他桌面 app」（互相導流、已裝就變開啟鈕）時先讀再接線。",
+      "how": "skill",
+      "skill": "family-kit"
+    }
+  ]
 }
